@@ -15,11 +15,11 @@ const Products: Product[] = [
 
 @Component({
     selector: 'my-app',
-    templateUrl: '/app/template/productDetail.html',
+    templateUrl: '/app/template/productList.html',
     styles: ["/styles.css"]
 })
 
-export class AppComponent {
+export class AppComponent { 
     title = 'Test Product';
     products = Products;
     selectedProduct: Product;

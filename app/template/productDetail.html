@@ -1,25 +1,18 @@
-<h1>{{title}}</h1>
-<h2>My Products</h2>
-<ul class="products">
-	<li *ngFor="let product of products" [class.selected]="product === selectedProduct" (click)="onSelect(product)">
-		<span class="badge">{{product.id}}</span> {{product.name}}
-	</li>
-</ul>
-<div *ngIf="selectedProduct">
-	<h2>{{selectedProduct.name}} Details!</h2>
+<div *ngIf="product">
+	<h2>{{product.name}} Details!</h2>
 	<div>
-		<label>id: </label>{{selectedProduct.id}}
+		<label>id: </label>{{product.id}}
 	</div>
 	<div>
 		<label>Name: </label>
-		<input [(ngModel)]="selectedProduct.name" placeholder="name">
+		<input [(ngModel)]="product.name" placeholder="name">
 	</div>
 	<div>
 		<label>Category: </label>
-		<input [(ngModel)]="selectedProduct.category" placeholder="category">
+		<input [(ngModel)]="product.category" placeholder="category">
 	</div>
-	<div>
+	<div> 
 		<label>Description: </label>
-        <textarea [(ngModel)]="selectedProduct.description" placeholder="description" rows="5" cols="50"> </textarea>
+        <textarea [(ngModel)]="product.description" placeholder="description" rows="5" cols="50"> </textarea>
 	</div>
 </div>
