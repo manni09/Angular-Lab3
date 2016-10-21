@@ -1,18 +1,19 @@
-<div *ngIf="product">
-	<h2>{{product.name}} Details!</h2>
+<div class="ui form" *ngIf="product">
+	<h2>{{product.name}} Details</h2>
+	<hr />
 	<div>
-		<label>id: </label>{{product.id}}
+		<label hidden>id: {{product.id}} </label>
 	</div>
-	<div>
+	<div class="field">
 		<label>Name: </label>
 		<input [(ngModel)]="product.name" placeholder="name">
 	</div>
-	<div>
+	<div class="field">
 		<label>Category: </label>
 		<input [(ngModel)]="product.category" placeholder="category">
 	</div>
-	<div> 
+	<div class="field">
 		<label>Description: </label>
-        <textarea [(ngModel)]="product.description" placeholder="description" rows="5" cols="50"> </textarea>
+		<textarea [(ngModel)]="product.description" placeholder="description" rows="5" cols="50"> </textarea>
 	</div>
 </div>

@@ -12,16 +12,18 @@ export class ProductListComponent {
 
   products: Product[];
   selectedProduct: Product;
+  productLodding: boolean = true;
 
   constructor(private productService: ProductService) {
   }
 
   ngOnInit(): void {
+    this.productLodding = true;
     this.getProducts();
   }
 
   getProducts(): void {
-    this.productService.getProductsSlowly().then(products => this.products = products);
+    this.productService.getProductsSlowly().then(products => this.products = products).then(() => this.productLodding = false);
   }
 
   onSelect(product: Product): void {

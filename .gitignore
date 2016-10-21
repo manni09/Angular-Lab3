@@ -3,6 +3,8 @@ typings/**
 node_modules
 jspm_packages
 link-checker-results.txt
+semantic
+semantic/**
 **/*npm-debug.log.*
 *.js
 *.js.map
