@@ -7,7 +7,11 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ProductService {
-    getProducts(): Product[] { 
-        return Products;
-    } // stub
+    getProducts(): Promise<Product[]> {
+        return Promise.resolve(Products);
+    }
+
+    getProductsSlowly(): Promise<Product[]> {
+        return new Promise<Product[]>(resolve => setTimeout(resolve, 2000)).then(() => this.getProducts());
+    }
 }

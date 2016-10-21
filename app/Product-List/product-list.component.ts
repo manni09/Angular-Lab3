@@ -1,7 +1,6 @@
 import { Product } from './../shared/Product';
 import { OnInit } from '@angular/core';
 import { ProductService } from './product.service';
-import { Product } from '../shared/Product';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -10,8 +9,10 @@ import { Component, Input } from '@angular/core';
   providers: [ProductService]
 })
 export class ProductListComponent {
+
   products: Product[];
   selectedProduct: Product;
+
   constructor(private productService: ProductService) {
   }
 
@@ -20,7 +21,7 @@ export class ProductListComponent {
   }
 
   getProducts(): void {
-    this.productService.getProducts().then(products => this.products = products);
+    this.productService.getProductsSlowly().then(products => this.products = products);
   }
 
   onSelect(product: Product): void {
