@@ -1,7 +1,6 @@
-import { Product } from './model/Product';
-import { Component } from '@angular/core';
+import { Product } from './Product';
 
-const Products: Product[] = [
+export  const Products: Product[] = [
     { id: 1, name: 'IPod', category: 'Tablet', description: 'Apple Ipod 4th generation' },
     { id: 2, name: 'IPhone 6', category: 'Phone', description: 'Apple IPhone 6 5th generation' },
 
@@ -13,19 +12,3 @@ const Products: Product[] = [
     { id: 6, name: 'Iphone 4S', category: 'Phone', description: 'The Apple iPhone 4S is powered by 800MHz dual-core and it comes with 512MB of RAM. The phone packs 16GB of internal storage cannot be expanded. As far as the cameras are concerned, the Apple iPhone 4S packs a 8-megapixel primary camera on the rear and a 0.3-megapixel front shooter for selfies.' }
 ];
 
-@Component({
-    selector: 'my-app',
-    templateUrl: '/app/template/productList.html',
-    styles: ["/styles.css"]
-})
-
-export class AppComponent { 
-    title = 'Test Product';
-    products = Products;
-    selectedProduct: Product;
-    
-
-    onSelect(product: Product): void {
-        this.selectedProduct = product;
-    }
-}

@@ -1,9 +1,9 @@
-import { Product } from './model/Product';
+import { Product } from '../shared/Product';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'my-product-detail', 
-  templateUrl: '/app/template/productDetail.html',
+  templateUrl: '/app/Product-Detail/productDetail.html',
 })
 export class ProductDetailComponent {
     @Input()
