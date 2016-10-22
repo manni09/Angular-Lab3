@@ -1,7 +1,13 @@
-// header
-
+<div class="ui stackable menu">
+  <div class="header item">
+    Company Name
+  </div>
+  <a routerLink="/dashboard" routerLinkActive="active" class="item"> <i class="home large icon"> </i>Dashboard</a>
+  <a routerLink="/products" routerLinkActive="active" class="item"> <i class="browser large icon"></i>  Products</a>
+</div>
 <div class="ui container">
-	<my-product-list> </my-product-list>
+	<router-outlet></router-outlet>
 </div>
 
-//footer
+<hr />
+&copy; 2016 Manni Dula

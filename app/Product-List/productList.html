@@ -1,5 +1,5 @@
 <div class="ui grid">
-	<div class="eight wide column">
+	<div class="six wide column">
 		<h2> Product List </h2>
 		<hr />
 		<ul class="products">
@@ -7,12 +7,9 @@
 				<span class="badge">{{product.id}}</span> {{product.name}}
 			</li>
 		</ul>
-		<div class="ui active inline loader" *ngIf="productLodding"></div>
+		<div class="ui active centered inline loader" *ngIf="productLodding"></div>
 	</div>
-	<div class="eight wide column">
+	<div class="ten wide column">
 		<my-product-detail [product]="selectedProduct"></my-product-detail>
 	</div>
 </div>
-
-
-
